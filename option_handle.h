@@ -1,7 +1,7 @@
 #ifndef _OPTION_HANDLE_H_
 #define _OPTION_HANDLE_H_
 
-void option_handle(int argc, char *argv[], char *envp[]);
+void option_handle(int argc, char *argv[]);
 
 
 void opt_help_handle(void);

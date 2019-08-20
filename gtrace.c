@@ -6,6 +6,9 @@
 #include <errno.h>
 
 #include "option_handle.h"
+#include "environ_handle.h"
+#include "elf_analyze.h"
+
 
 #define LOGO_PATH "logo.txt"
 
@@ -164,8 +167,12 @@ void wm(void *addr, unsigned int value){
 	}
 }
 
-int main(int argc, char *argv[], char *envp[]){
-	option_handle(argc,argv,envp);
+int main(int argc, char *argv[]){
+	option_handle(argc,argv);
+	environ_handle();
+
+	elf_analyze_init();
+
 	//display_logo();
 	//trace(argv,envp);
 

@@ -16,7 +16,7 @@ const struct option longopts[] = {
 	{0,0,0,0},
 };
 
-void option_handle(int argc, char *argv[], char *envp[]){
+void option_handle(int argc, char *argv[]){
 	int opt;
 	int longindex;
 	while((opt = getopt_long(argc,argv,"f:p:hvq",longopts,&longindex)) != -1){
