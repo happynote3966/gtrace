@@ -18,3 +18,19 @@ void elf_analyze_init(void){
 
 	printf("%d\n",bfd_get_arch(pbfd));
 }
+
+void elf_analyze_section(void){
+	struct bfd_section *tmp;
+
+	if(pbfd->section_count == 0){
+		puts("NO SECTION!");
+	}
+
+	tmp = pbfd->sections;
+
+	while(tmp){
+		puts(tmp->name);
+		tmp = tmp->next;
+	}
+}
+

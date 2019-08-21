@@ -172,7 +172,7 @@ int main(int argc, char *argv[]){
 	environ_handle();
 
 	elf_analyze_init();
-
+	elf_analyze_section();
 	//display_logo();
 	//trace(argv,envp);
 

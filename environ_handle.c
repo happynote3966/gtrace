@@ -17,8 +17,12 @@ void environ_handle(void){
 	env = &gtrace_environ[i];
 	while(env->environ != NULL){
 		val = getenv(env->environ);
-		env->func(val);
+		
+		if(val){
+			env->func(val);
+		}
 		env = &gtrace_environ[++i];
+
 	}
 }
 

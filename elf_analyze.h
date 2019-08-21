@@ -7,4 +7,6 @@ bfd *pbfd;
 
 void elf_analyze_init(void);
 
+void elf_analyze_section(void);
+
 #endif
