@@ -9,6 +9,7 @@ gtrace: $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(CFLAGS_BFD)
 	$(CC) $(CFLAGS) -fPIE -pie -o sample sample.c
 	$(CC) $(CFLAGS) -o loop loop.c
+	$(CC) $(CFLAGS) -o test test.c -lelf
 
 gtrace.o: gtrace.c
 	$(CC) $(CFLAGS) -c $<
@@ -27,3 +28,4 @@ clean:
 	rm -f gtrace
 	rm -f sample
 	rm -f loop
+	rm -f test
